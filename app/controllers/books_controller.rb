@@ -14,8 +14,10 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      redirect_to @book, notice: 'Книга успешно создана.'
+      # flash[:notice] = 'Книга успешно создана.'
+      redirect_to @book
     else
+      # flash.now[:alert] = 'Ошибка при создании книги.'
       render :new
     end
   end

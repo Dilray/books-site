@@ -1,13 +1,24 @@
-<h1>Список книг</h1>
 
-<%= link_to 'Добавить книгу', new_book_path %>
+<div class="book-list-title">Список книг</div>
 
-<ul>
-  <% @books.each do |book| %>
-    <li>
-      <%= link_to book.title, book %>
-      <%= link_to 'Редактировать', edit_book_path(book) %>
-      <%= link_to 'Удалить', book, method: :delete, data: { confirm: 'Вы уверены?' } %>
-    </li>
-  <% end %>
-</ul>
+<div class="book-link">
+  <form action="/add_book/" method="post">
+    <button type="submit">Добавить книгу</button>
+  </form>
+<!--  <form action="/edit_book/" method="get">-->
+<!--    <button type="submit">Редактировать</button>-->
+<!--  </form>-->
+<!--  <form action="/delete_book/" method="post">-->
+<!--    <button type="submit">Удалить</button>-->
+<!--  </form>-->
+</div>
+
+<!--<div class="books">-->
+  <%# @books.each do |book| %>
+<!--    <div class="book-item">-->
+      <%#= link_to book.title, book %>
+      <%#= link_to 'Редактировать', edit_book_path(book) %>
+      <%#= link_to 'Удалить', book, method: :delete, data: { confirm: 'Вы уверены?' } %>
+<!--    </div>-->
+  <%# end %>
+<!--</div>-->

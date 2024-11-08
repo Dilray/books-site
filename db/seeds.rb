@@ -7,4 +7,4 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-@books = Book.create([{ title: "A", author: "A", description: "A"}] )
+@books = Book.create([{ :title => "A", :author => "A", :description => "A" }] )
